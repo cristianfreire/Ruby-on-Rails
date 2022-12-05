@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lista de Clientes</h1>
+
+<%# não modifica o código%>
+<% a = "Ruby" %>  
+<% b = "Rails" %>  
+
+<%# modifica o codigo%>
+<%= "Texto: #{a} on #{b}"  %>
+
+<div id="customers">
+  <% @customers.each do |customer| %>
+    <%= render customer %>
+    <p>
+      <%= link_to "Show this customer", customer %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New customer", new_customer_path %>
